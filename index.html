@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>社長、AIを導入したのに、なぜ？｜おもてなしの学校</title>
+  <meta name="description" content="ひとりの経営者と一緒に、AI導入の先にある経営の問いを考える物語。おもてなしの学校（シーキューブ株式会社）のデジタル絵本。">
+  <meta name="theme-color" content="#1f3352">
+  <link rel="preload" href="images/page-01.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#stage">本文へ移動</a>
+
+  <div class="app" id="app">
+    <header class="topbar">
+      <p class="brand">おもてなしの学校</p>
+      <p class="topbar-title" id="topbarTitle">社長、AIを導入したのに、なぜ？</p>
+    </header>
+
+    <main class="stage" id="stage" tabindex="-1" aria-label="絵本">
+      <p class="loading">読み込み中です…</p>
+    </main>
+
+    <nav class="controls" aria-label="絵本の操作">
+      <div class="notice" id="notice" role="status" hidden>
+        <p id="noticeText"></p>
+        <button type="button" class="notice-close" id="noticeClose" aria-label="お知らせを閉じる">×</button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" id="progressBar" role="progressbar" aria-label="読んだ量" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0">
+          <span class="progress-fill" id="progressFill"></span>
+        </div>
+        <span class="page-counter" id="pageCounter" aria-hidden="true">表紙</span>
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="btn" id="btnRestart">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>
+          <span>最初から読む</span>
+        </button>
+        <button type="button" class="btn" id="btnPrev">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+          <span>前へ</span>
+        </button>
+        <button type="button" class="btn" id="btnNext">
+          <span>次へ</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+        </button>
+        <button type="button" class="btn btn-primary" id="btnAuto" aria-pressed="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span id="btnAutoLabel">自動で読む</span>
+        </button>
+        <button type="button" class="btn" id="btnPause" disabled>
+          <svg aria-hidden="true" viewBox="0 0 24 24" id="iconPause"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+          <span id="btnPauseLabel">一時停止</span>
+        </button>
+        <button type="button" class="btn" id="btnVoice" aria-pressed="true">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+          <span id="btnVoiceLabel">音声オン</span>
+        </button>
+      </div>
+    </nav>
+
+    <p class="visually-hidden" id="liveRegion" aria-live="polite"></p>
+  </div>
+
+  <noscript>
+    <p class="noscript">この絵本を表示するには、ブラウザのJavaScriptを有効にしてください。</p>
+  </noscript>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
